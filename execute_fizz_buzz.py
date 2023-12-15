@@ -1,2 +1,4 @@
 def fizz_buzz(num: int) -> str:
-  return ""
+  if num % 3 == 0:
+    return "Fizz"
+  return str(num)
