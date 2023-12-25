@@ -32,9 +32,10 @@ def test_fizz_buzz_multiple_of_5() -> None:
   expected = "Buzz"
   assert result == expected
 
-def test_fizz_buzz_multiple_of_3_5() -> None:
+def test_fizz_buzz_multiple_of_3_5(mocker) -> None:
   # 準備
   num = 15
+  mocker.patch("execute_fizz_buzz.execute_api", return_value={})
 
   # 実行
   result = fizz_buzz(num)
